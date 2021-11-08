@@ -1,0 +1,453 @@
+/* style.css */
+:root {
+    --main-color: #0066CC;
+    --text-color: #333;
+    --footer-bg-color: #e2e2e2;
+    --outline-color: transparent;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+
+  h2{
+      font-size: 36px;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-color);
+    font-size: 18px; 
+    font-weight: 400;
+  }
+  
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1000px;
+  }
+  
+  .top-menu {
+    background: var(--main-color);
+    text-align: right;
+    padding: 10px 0;
+    font-size: 14px;
+    min-width: 1200px;
+  }
+  
+  .top-menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .top-menu ul li a {
+    color: #fff;
+  }
+  
+  #main-header {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+  }
+  
+  #main-header .header-box {
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    /* background: #ccc; */
+    text-align: center;
+  }
+  
+  #main-header .header-box h1 {
+    position: absolute;
+    left: 0;
+    top: 17px;
+  }
+  
+  #main-header .search {
+    position: absolute;
+    right: 0;
+    top: 28px;
+  }
+  
+  /* gnb */
+  #gnb {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  
+  #gnb > .depth1 {
+    display: flex;
+  }
+  
+  #gnb > .depth1 > li {
+    width: 110px;
+  }
+  
+  /* 1단계 hover */
+  #gnb > .depth1 > li:hover > a{
+    color: var(--main-color);
+  }
+  
+  #gnb > .depth1 > li:hover .depth2 {
+    border-top: 4px solid var(--main-color);
+  }
+  
+  #gnb .depth2 {
+    /* outline: 1px solid red; */
+    padding: 30px 0;
+    /* margin-top: 25px; */
+    background: #ddd;
+    display: none;
+    transform: translateY(24px);
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+  }
+  
+  #gnb .depth2 > li > a {
+    display: block;
+    padding: 6px 0;
+  }
+  
+  /* 2단계 메뉴 hover */
+  #gnb .depth2 > li > a:hover {
+    color: #fff;
+    background: var(--main-color);
+  }
+  
+  .search .fa{
+    font-size: 24px;
+  }
+  
+  /* 검색 팝업창 */
+  #search-popup {
+    border: 1px solid #ccc;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #fff;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+  
+  #search-popup .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #ccc; */
+  }
+  
+  #search-popup input[type=search] {
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  #btn-search {
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #btn-close {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    padding: 5px;
+    font-size: 28px;
+    border: none;
+    background: transparent;
+  }
+  
+  #main-visual {
+    position: relative;
+  }
+  
+  #main-visual .slider {
+    position: absolute;
+    width: 1920px;
+    height: 600px;
+    margin: 0 auto;
+    /* 배너를 중앙에 고정 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #main-visual .slider img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* pager */
+  .pager {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    /* background: #ccc; */
+    z-index: 10;
+    margin: 0 auto;
+  }
+  
+  .pager .leftBtn {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .pager .rightBtn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /*버튼스타일*/
+  .btn {
+      padding-left: 40px;
+      padding-right: 40px;
+      height: 50px;
+      background:#000;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+  }
+
+  .btn-primary{
+      background: var(--main-color);
+  }
+
+  .btn-outline {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+  }
+
+ /* inside Roche (about) */
+  #about .container{
+      display: flex;
+      padding: 100px 0;
+  }
+
+  #about .title{
+      padding-right: 60px;
+      padding-top: 40px;
+  }
+
+  #about .title h2{
+      font-size: 56px;
+  }
+  #about .title h2 span{
+      font-weight: 400;
+  }
+
+  #about .title p{
+      font-size: 22px;
+      margin-bottom: 60px;
+  }
+
+  #products{
+      background: #ececec;
+      width: 1200px;
+      margin: 0 auto;
+  }
+
+  #products .container{
+      padding-top: 100px;
+      padding-bottom: 100px;
+      text-align: center;
+  }
+
+  #products h2{
+      color: var(--main-color);
+      font-weight: 400;
+      margin-bottom: 60px;
+  }
+  
+  #products .product-box{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  #products .product-box .product{
+      padding-bottom: 24px;
+      background: #fff;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  }
+
+  #products .product-box .product img{
+      margin-bottom: 30px;
+  }
+  #products .product-box .product h3{
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 14px;
+  }
+
+  #products .product-box .product a{
+      font-size: 16px;
+      color: var(--main-color);
+      text-decoration: underline;
+  }
+
+  #responsibility {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #ccc;
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #fff;
+    background-image: url(../images/사회적책임img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #responsibility h2 {
+    margin-bottom: 60px;
+  }
+  
+  #responsibility p {
+    font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 55px;
+  }
+  
+  /* 뉴스 및 빠른문의 */
+  #news-section {
+    background: #fff;
+  }
+  #news-section h2 {
+    font-size: 32px;
+    color: var(--main-color);
+    font-weight: 400;
+  }
+  #news-section .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+  }
+  
+  #news-section #news {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    padding-right: 86px;
+  }
+  
+  #news-section #news h2 {
+    margin-bottom: 50px;
+  }
+  
+  #news-section #news .news-list {
+    margin-bottom: 80px;
+  }
+  
+  #news-section #news .news-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-bottom: 19.5px;
+  }
+  
+  #news-section #news .news-list li .date {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  #news-section #contact {
+    width: 50%;
+    padding-left: 48px;
+    margin-bottom: 80px;
+  }
+  
+  /* 빠른문의 */
+  #contact h2 {
+    margin-bottom: 50px;
+  }
+  
+  #contact form .form-group {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  
+  #contact form label {
+    width: 105px;
+    display: inline-block;
+  }
+  
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+    height: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-color: #ccc;
+    border-style: solid;
+    font-size: 18px;
+  }
+  #contact form textarea {
+    height: 100px;
+    padding: 1em;
+  }
+  
+  #contact form button#submit {
+    margin-top: 30px;
+  }
+  
+  #main-footer {
+    background: var(--footer-bg-color);
+  }
+  #main-footer .container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  #main-footer .footer-link a {
+    font-size: 16px;
+    color: #6a6a6a;
+    font-weight: 400;
+    margin-right: 1.2em;
+    display: inline-block;
+  }
+  #main-footer .footer-link {
+    margin-bottom: 24px;
+  }
+  #main-footer .footer-info {
+    font-size: 14px;
+    color: #6a6a6a;
+  }
+
+
+
+  
